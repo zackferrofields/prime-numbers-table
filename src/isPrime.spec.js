@@ -1,5 +1,5 @@
 const test = require('tape');
-const { isPrime } = require('./prime.js');
+const isPrime = require('./isPrime.js');
 
 test('isPrime', function (t) {
   t.plan(2);
