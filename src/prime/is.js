@@ -22,6 +22,6 @@ const isPrime = i => compose(all(modulo(i)), rangeSqrt)(i);
  * @example
  *
  *  isPrime(1); //→ false
- *  R.range(2);  //→ true
+ *  isPrime(2);  //→ true
  */
 module.exports = both(flipdGt(1), isPrime);
