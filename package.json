@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "tape src/**/*.spec.js",
     "lint": "eslint src/**/*.js"
   },
