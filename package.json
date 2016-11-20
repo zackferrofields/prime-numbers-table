@@ -20,5 +20,8 @@
   "devDependencies": {
     "eslint": "^3.10.2",
     "tape": "^4.6.2"
+  },
+  "dependencies": {
+    "ramda": "^0.22.1"
   }
 }
