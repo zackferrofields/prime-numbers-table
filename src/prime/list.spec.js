@@ -1,7 +1,7 @@
 const test = require('tape');
 const listPrime = require('./list.js');
 
-test('isPrime', function (t) {
+test('listPrime', function (t) {
   t.plan(4);
   t.deepEquals(listPrime(2), [2, 3], 'first `2` prime numbers');
   t.deepEquals(listPrime(3), [2, 3, 5], 'first `3` prime numbers');
