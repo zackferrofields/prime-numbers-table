@@ -1,4 +1,4 @@
-const { until, lte, gte, propSatisfies, add, last, compose, append, unapply, always, ifElse, } = require('ramda');
+const {until, lte, gte, propSatisfies, add, last, compose, append, unapply, always, ifElse} = require('ramda');
 const isPrime = require('./is.js');
 
 // [Number] → Number
@@ -14,16 +14,17 @@ const untilPrimes = x => until(propSatisfies(lte(x), 'length'), listPrimes);
  * Returns a list of `x` prime numbers.
  *
  * @func
- * @sig Number → [Number]
- * @param {Number}
+ * @sig Number → Number → [Number]
+ * @param {Number} Start
+ * @param {Number} Count
  * @return {Number[]}
  * @example
  *
  *  untilPrimes(0); //→ []
  *  untilPrimes(3);  //→ [2, 3, 5]
  */
-module.exports = ifElse(
+module.exports = start => ifElse(
   gte(0),
   always([]),
-  compose(fn => fn(2), unapply, untilPrimes)
+  compose(fn => fn(start), unapply, untilPrimes)
 );
