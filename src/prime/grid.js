@@ -9,7 +9,7 @@ const primeGrid = i => pipe(
 )(i);
 
 /**
- * Returns a multi-dimensional of `x` + 1 prime tables.
+ * Returns a multi-dimensional array of `x+1` prime tables.
  *
  * @func
  * @sig Number → [[Number]]

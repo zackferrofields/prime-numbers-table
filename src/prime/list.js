@@ -7,7 +7,7 @@ const nextPrime = compose(until(isPrime, add(1)), add(1), last);
 // [Number] → [Number]
 const listPrimes = list => append(nextPrime(list), list);
 
-// Number → [Number] → [Number]
+// Number → Number → [Number]
 const untilPrimes = x => until(propSatisfies(lte(x), 'length'), listPrimes);
 
 /**
@@ -20,8 +20,8 @@ const untilPrimes = x => until(propSatisfies(lte(x), 'length'), listPrimes);
  * @return {Number[]}
  * @example
  *
- *  untilPrimes(0); //→ []
- *  untilPrimes(3);  //→ [2, 3, 5]
+ *  untilPrimes(0)(0); //→ []
+ *  untilPrimes(2)(3);  //→ [2, 3, 5]
  */
 module.exports = start => ifElse(
   gte(0),
